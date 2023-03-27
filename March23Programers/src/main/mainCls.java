@@ -3,7 +3,8 @@ package main;
 public class mainCls {
 
 	public static void main(String[] args) {
-		question4(23, 34);
+		String text[] = {"aya", "yee", "u", "maa", "wyeoo"};
+		solution(text);
 	}
 	
 	public static int question1(int age) {
@@ -44,23 +45,35 @@ public class mainCls {
 	
 	public static int solution(String[] babbling) {
         int answer = 0;
-        int babblingArr[] = {0,0,0,0};
+        
         for(String temp : babbling){
-        	if(temp.indexOf("aya") != -1) {
-        		babblingArr[0] = 1;
-        	} else if(temp.indexOf("ye") != -1) {
-        		babblingArr[1] = 1;
-        	} else if(temp.indexOf("woo") != -1) {
-        		babblingArr[2] = 1;
-        	} else if(temp.indexOf("ma") != -1) {
-        		babblingArr[3] = 1;
-        	}
+        	answer = recursiveCall(temp) > answer ? recursiveCall(temp) : answer;
         }
         
-        for(int temp : babblingArr) {
-        	answer += temp == 1 ? 1 : 0 ;
-        }
         return answer;
     }
+	
+	public static int recursiveCall(String babling) {
+		int result = 0;
+		if(babling.indexOf("aya") != -1) {
+			babling.replace("aya", "aya|");
+			result ++;
+    	}
+		if(babling.indexOf("ye") != -1) {
+			babling.replace("ye", "ye|");
+    		result ++;
+    	}
+		if(babling.indexOf("woo") != -1) {
+			babling.replace("woo", "woo|");
+    		result ++;
+    	}
+		if(babling.indexOf("ma") != -1) {
+			babling.replace("ma", "ma|");
+    		result ++;
+    	}
+		System.out.println(babling);
+		result = babling.equals("") ? result : 0;
+		return result;
+	}
 	
 }
