@@ -35,13 +35,32 @@ public class ArrayList {
 				result += elements[i] + "]";
 			}
 			 
-		}
+		} 
 		return result;
 	}
 
 	public void addFirst(Object element) {
 		add(0, element);
 	}
+
+	public void addLast(Object element) {
+		add(size, element);
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return size;
+	}
+	
+	public Object removeLast() {
+		Object result = elements[size-1];
+		elements[size-1] = null;
+		size--;
+		
+		return result;
+	}
+	
+
 
 
 }
