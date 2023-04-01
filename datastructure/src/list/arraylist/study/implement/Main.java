@@ -11,8 +11,10 @@ public class Main {
 		
 		list.remove(0);
 		list.add(0, 5);
-		list.addFirst("안녕");
+		list.addFirst("Head");
+		list.addLast("Tail");
 		
 		System.out.println(list.toString());
+		System.out.println(list.size());
 	}
 }
