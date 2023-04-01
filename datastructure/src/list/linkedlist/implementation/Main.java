@@ -14,9 +14,9 @@ public class Main {
 		numbers.add(1, 15);
 		
 		
-		System.out.println(numbers.removeFirst());
+		LinkedList.ListIterator itr = numbers.listIterator();
+		System.out.println(itr.next());
 		
-		System.out.println(numbers);
 		
 		
 	}

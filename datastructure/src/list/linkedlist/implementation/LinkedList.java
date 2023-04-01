@@ -65,7 +65,7 @@ public class LinkedList {
 		String str = "[";
 		
 		while (temp.next !=  null) {
-			str += temp.data += ", ";
+			str += temp.data + ", ";
 			temp = temp.next;
 		}
 		str += temp.data;
@@ -92,4 +92,57 @@ public class LinkedList {
 		return result;
 		
 	}
+
+	public Object remove(int k) {
+		if(k == 0 ) {
+			return removeFirst();
+		}
+		Node temp = node(k-1);
+		Node todoDeleted = temp.next;
+		temp.next = temp.next.next;
+		Object resultData = todoDeleted.data;
+		if(todoDeleted == tail) {
+			tail = temp;
+		}
+		todoDeleted = null;
+		size--;
+
+		return resultData;
+	}
+
+	public Object removeLast() {
+		return remove(size-1);
+	}
+	
+	public int size() {
+		return size;
+	}
+	
+	public Object get(int index) {
+		Node temp = node(index-1);
+		return temp;
+	}
+	
+	public int indexOf(Object input) {
+		
+		for(int i=0; i<size; i++) {
+			Node temp = node(i);
+			System.out.println("indexOf :: " + temp.data);
+			if(temp.data.equals(input)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public ListIterator listIterator() {
+		return new ListIterator();
+	}
+	
+	class ListIterator{
+		public Object next() {
+			return null;
+		}
+	}
+	
 }
