@@ -1,25 +1,24 @@
 package list.linkedlist.implementation;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Iterator<Integer> it;
-		List<Integer> numbers = new ArrayList<Integer>();
-		numbers.add(4);
-		numbers.add(5);
-		numbers.add(6);
-		numbers.add(7);
-		it = numbers.iterator();
+		LinkedList numbers = new LinkedList();
+//		numbers.addFirst(30);
+		numbers.addFirst(20);
+		numbers.addFirst(10);
+		numbers.addLast(40);
+		numbers.addLast(50);
 		
-		while (it.hasNext()) {
-			System.out.println(it.next());
-			
-		}
+		numbers.add(1, 15);
+		
+		
+		System.out.println(numbers.removeFirst());
+		
+		System.out.println(numbers);
+		
+		
 	}
 
 }
