@@ -4,7 +4,7 @@ public class 내_마음대로_정렬 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] strings= {"abce", "abcd", "cdx"};
+		String[] strings= {"abzcd","cdzab","abzfg","abzaa","abzbb","bbzaa"};
 		int n = 2;
 		String temp = "";
 		for(int i=0; i<strings.length; i++) {
@@ -20,22 +20,13 @@ public class 내_마음대로_정렬 {
 			if(temp == "") {
 				continue;
 			} else {
-				if(strings[i].charAt(n) > temp.charAt(n)) {
+				if(strings[i].charAt(n) < temp.charAt(n)) {
 					temp = strings[i];
 					strings[i] = strings[tempIdx];
 					strings[tempIdx] = temp;
 				} else if(strings[i].charAt(n) == temp.charAt(n)) {
 					for(int j =0; j<strings[i].length(); j++) {
-						if(strings[i].charAt(j) != strings[tempIdx].charAt(j)) {
-							if( strings[i].charAt(j) > strings[tempIdx].charAt(j) ) {
-								temp = strings[i];
-								strings[i] = strings[tempIdx];
-								strings[tempIdx] = temp;
-							} else {
-								break;
-							}
-							
-						}
+						
 					}
 				}
 			}
