@@ -3,6 +3,8 @@ package org.lirodek.test;
 import java.util.ArrayList;
 
 public class 배열만들기T {
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
