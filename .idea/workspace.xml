@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9b44a54-d7c1-45bb-9cf9-08d22dc3faa9" name="Changes" comment="" />
+    <list default="true" id="d9b44a54-d7c1-45bb-9cf9-08d22dc3faa9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +25,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/xkfh1/developer/github/Troubleshooting_coding_tests",
+    "last_opened_file_path": "C:/Users/xkfh1/IdeaProjects/programers",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -36,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690376375715</updated>
       <workItem from="1690376376732" duration="127000" />
+      <workItem from="1690979548970" duration="147000" />
     </task>
     <servers />
   </component>
