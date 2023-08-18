@@ -8,21 +8,10 @@ import java.util.stream.Collectors;
 
 public class test22 {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        ArrayList<String> strList = new ArrayList<>();
-        for(Integer i : list){
-            String str = String.valueOf(i);
-            if(!str.startsWith("1")){
-                continue;
-            }
-            strList.add(String.valueOf(i));
-        }
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
+        list.stream().takeWhile(item -> item < 4).forEach(System.out::println);
+        
 
-
-        List<String> collect = list.stream().map(i -> String.valueOf(i)).filter(str->str.startsWith("1")).collect(Collectors.toList());
     }
 }
