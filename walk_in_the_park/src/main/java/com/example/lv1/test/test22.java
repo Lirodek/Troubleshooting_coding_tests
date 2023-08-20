@@ -1,9 +1,6 @@
 package com.example.lv1.test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -11,18 +8,11 @@ import java.util.stream.Stream;
 
 public class test22 {
     public static void main(String[] args) {
-<<<<<<< Updated upstream
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-=======
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(3);
-        list.add(4);
-        list.add(2);
-
         Optional<String> str;
         Stream<String> hello;
         List<String> newList = new ArrayList<>();
+        Map<String, Integer> hell2 = new Hashtable<>();
         for(Integer tempIdx : list) {
             if(tempIdx <= 2){
                 continue;
@@ -79,14 +69,7 @@ public class test22 {
                 .forEach(item-> System.out.println(item instanceof String));
         */
 
->>>>>>> Stashed changes
-
         list.stream().takeWhile(item -> item < 4).forEach(System.out::println);
-        
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     }
 }
